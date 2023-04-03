@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Get a Quote for Your Scrap Car</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Get a Quote for Your Scrap Car</h1>
+  <form id="quote-form">
+    <label for="car-reg">Car Registration:</label>
+    <input type="text" id="car-reg" name="registration"><br>
+    <label for="car-postcode">Car Postcode:</label>
+    <input type="text" id="car-postcode" name="postcode"><br>
+    <input type="submit" value="Get Quote">
+  </form>
+  <div id="quote-results"></div>
+  <script>
+    $('#quote-form').submit(function(event) {
+      event.preventDefault();
+      var registration = $('#car-reg').val().toUpperCase().replace(/\s/g,'');
+      var postcode = $('#car-postcode').val().toUpperCase().replace(/\s/g,'');
+      $.ajax({
+        url: 'https://api.scrapcarcomparison.co.uk/api/scrap-value',
+        type: 'GET',
+        data: {
+          registration: registration,
+          postcode: postcode
+        },
+        headers: {
+          'Authorization': 'YOUR_API_KEY'
+        },
+        success: function(response) {
+          $('#quote-results').html('Your car\'s scrap value is: &pound;' + response.data.scrap_value);
+        },
+        error: function(xhr, status, error) {
+          $('#quote-results').html('Error: ' + xhr.responseText);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
