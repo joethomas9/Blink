@@ -87,17 +87,19 @@ function value_calc($data){
   $postcodeVal = postcode_check($postcode);
   if ($postcodeVal == 0) {
     echo 'Unfortunately we dont typically service your postcode, but feel free to contact us if you want to enquire further';
+  } else {
+    $weightVal = calc_weight($weight);
+    $yearVal = calc_year($year);
+
+    if ($weightVal == null || $yearVal == null) {
+      echo '<p>Sorry, there was an issue processing your estimate, please contact us for a quote!</p>';
+    }
+    echo '<p>Postcode: '.$postcodeVal.' | Weight: '.$weightVal.' | Year: '.$yearVal.'</p>';
+    $estimateVal = $postcodeVal + $weightVal + $yearVal;
+    echo $estimateVal;
   }
 
-  $weightVal = calc_weight($weight);
-  $yearVal = calc_year($year);
-
-  if ($weightVal == null || $yearVal == null) {
-    echo '<p>Sorry, there was an issue processing your estimate, please contact us for a quote!</p>';
-  }
-  echo '<p>Postcode: '.$postcodeVal.' | Weight: '.$weightVal.' | Year: '.$yearVal.'</p>';
-  $estimateVal = $postcodeVal + $weightVal + $yearVal;
-  echo $estimateVal;
+  
 }
 
 
