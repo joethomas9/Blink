@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vehicle Information</title>
+</head>
+<body>
+	<h1>Enter Vehicle Registration Number</h1>
+	<form action="get_vehicle_info.php" method="post">
+		<label for="reg_num">Registration Number:</label>
+		<input type="text" id="reg_num" name="reg_num">
+		<label for="post_code">Postcode:</label>
+		<input type="text" id="post_code" name="post_code">
+		<input type="submit" value="Get Information">
+	</form>
+</body>
+</html>
+
+
+
 <?php
 
 function binarySearch($arr, $x, $key) {
@@ -74,9 +93,9 @@ function value_calc($data){
   echo "<h1>Vehicle Information</h1>";
   echo "<p><strong>Make:</strong> " . $data['make'] . "</p>";
   echo "<p><strong>Year:</strong> " . $data['yearOfManufacture'] . "</p>";
-  echo "<p><strong>Weight:</strong> " . $data['revenueWeight'] ?? null . "</p>";
   if (array_key_exists('revenueWeight', $data)) {
     $weight = $data['revenueWeight'];
+    echo "<p><strong>Weight:</strong> " . $data['revenueWeight']."</p>";
   } 
   else {
     $weight = 1000;
@@ -136,5 +155,7 @@ if (isset($_POST['reg_num']) && isset($_POST['post_code'])) {
 }
 
 ?>
+
+
 
 
