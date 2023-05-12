@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles-contact.css">
+    
+</head>
+
+<header class="site-header">
+    <a href="index.html">
+        <div style="display: flex; align-items: center; ">
+            <img id="header-logo" src="../images/logo/black-logotype-lockup.png" style="max-height: 20px;" alt="">
+        </div>
+    </a>
+
+    
+    <div class="navbar">
+        <ul class="nav-link">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<body>
+
+
+
+    <div class="content-padding">
+        <div class="grid-container">
+            <div class="grid">
+                <div class="title-container">
+                    <h1>Contact Us</h1>
+                </div>
+                <div class="contact-info">
+                    <h2 id='greeting'>Hello there</h2>
+                <p>
+                    You can get in touch by either filling out the contact form, or using our contact details below.
+                </p>
+
+                </div>
+                
+                <div class="content-block">
+                    <p><strong>Contact Details</strong></p>
+                    <p>wendy@theplantsmith.co.uk</p>
+                    <p>07813-203-464</p>
+                </div>
+                
+                <div class="content-block">
+                    <p><strong>Studio Hours</strong></p>
+                    <p>Monday - Friday: 9:00am - 17:00pm</p>
+                    <p>Saturday - Sunday: Closed</p>
+                    <p>Bank Holidays: Closed</p>
+                </div>
+
+                
+            </div>
+        
+        <div class="grid">
+            <div class="form-container">
+                <form class="contact-form">
+
+                    <div class="input-row">
+
+                        <div class="input-group">
+                            <label for="firstname">First Name</label>
+                            <input type="text" id="firstname" name="firstname" placeholder="First Name">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="lastname">Last Name *</label>
+                            <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+                        </div>
+
+                    </div>
+                    
+                    <div class="input-row">
+
+                        <div class="input-group">
+                            <label for="email">Email *</label>
+                            <input type="text" id="email" name="email" placeholder="Email Address">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="number">Phone Number *</label>
+                            <input type="text" id="number" name="number" placeholder="Contact Number">
+                        </div>
+
+                    </div>
+                    
+
+                    <div class="input-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" placeholder="What are you planning?">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" maxlength="1000" placeholder="How can we help?"></textarea>
+                    </div>
+
+                    <button type="submit">Send</button>
+                    <p style="color: #eaeaea; margin-top: 10px; font-size: 12px;">Using the data provided in this form, we aim to be in touch during our next studio day.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        var currentTime = new Date().getHours();
+        
+        if (currentTime < 12) {
+            var text = 'Good Morning';
+        } else if (currentTime < 17) {
+            var text = 'Good Afternoon';    
+        } else {
+            var text = 'Good Evening';
+        }
+
+        document.getElementById('greeting').innerHTML = text;
+
+    </script>
+</body>
+
+<footer>
+    <div class="content-padding">
+        <div class="footer-container">
+            <a href="index.html">
+                <img src="../images/logo/White-logotype-lockup.png" alt="">
+            </a>
+            <div class="footer-nav">
+                <div class="footer-list-container">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="Testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="footer-content" style="width: 100%;">
+                <div class="legal">
+                    <ul>
+                        <li><p style="color: rgb(255, 93, 2)">Blink</p></li>
+                        <li><p>© 2023 The PlantSmith Garden Design. All Rights Reserved.</p></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</footer>
+
+<body>
+    
+</body>
+</html>

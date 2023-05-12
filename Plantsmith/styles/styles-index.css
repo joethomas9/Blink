@@ -1,0 +1,348 @@
+@media screen and (min-width: 770px) {
+
+  .site-header {
+        padding: 15px 60px;
+  }
+
+  .site-header img {
+    margin: 0 8vw;
+    max-height: 20px;
+}
+
+  .navbar {
+    margin: 0 8vw;
+  }
+
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    margin-left: 2vw;
+    padding: none;
+    font-size: 16px;
+  }
+  
+  .navbar li:first-child {
+    margin-left: 0;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+  }
+
+.nav-link a {
+    font-weight: 100;
+}
+
+.nav-link a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+}
+
+.nav-link a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.hero {
+    background-image: url(../images/site-images/garden-table.png); 
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+}
+
+.hero-content img {
+  width: 10%;
+}
+
+.hero-content h1 {
+    padding: 0;
+    margin: 10px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Copyline and center navigation */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* left column */ 
+.center-nav {
+    margin: 0 8vw;
+    margin-top: 150px;
+    max-width: 32vw;
+}
+
+.center-nav h1, h4{
+    margin-bottom: 20px;
+}
+
+.center-nav-menu {
+    border-top: 1px solid #343C38;
+}
+
+.center-nav-menu a {
+    border-bottom: 1px solid #343C38;
+    padding: 10px 0 10px 10px;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    color: #343C38;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+.center-nav-menu a:hover {
+    padding-right: 0px;
+  }
+  
+.center-nav-menu a span {
+    padding: 0;
+    padding-right: 20px;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    right: 0px;
+    transition: transform 0.3s ease;
+  }
+  
+.center-nav-menu a:hover span {
+    transform: translateX(20px);
+  }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* right column */ 
+.center-text {
+    margin: 0 8vw;
+    margin-top: 150px;
+    max-width: 32vw;
+}
+
+/* portfolio preview */
+
+.header-container {
+  margin: 0 8vw;
+  margin-top: 150px;
+}
+
+.portfolio-container {
+  margin: 50px 8vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid:first-child {margin: 0;}
+
+.grid {
+  margin-left: 1vw;
+  max-width: 24vw;
+  transition: all 0.3s ease;
+}
+
+.grid img{
+  max-width: 100%;
+}
+
+.grid:hover {
+  filter: brightness(110%);
+  color: #FAF9F6;
+}
+
+.portfolio-link {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-link a {
+    padding: 0 10px 10px;
+    border-bottom: 1px solid #343C38;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.portfolio-link a:hover {
+    color: #FAF9F6;
+    border-bottom: 1px solid #FAF9F6;
+}
+
+/* contact menu centered bottom of page above footer*/
+}
+
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    border-bottom: none;
+    z-index: 100;
+    transition: background-color 0.5s ease;
+    color: white;
+}
+  
+
+.site-header.scroll {
+    background-color: #FAF9F6;
+    color: #23291e;
+    border-bottom: 1px solid #23291e;
+}
+
+.site-header.scroll .navbar a {
+    color: #23291e;
+}
+
+.site-header.scroll .nav-link a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #23291e;
+    transition: width .3s;
+}
+
+.site-header.scroll .nav-link a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+@media screen and (max-width: 769px) {
+
+  .site-header {
+        padding: 15px 30px;
+  }
+  .site-header img {
+    margin: 0;
+    height: 20px;
+  }
+
+  .center-nav {
+    margin-top: 100px;
+  }
+
+  .center-nav h1, h4{
+    margin-bottom: 20px;
+}
+
+.center-nav-menu {
+    border-top: 1px solid #343C38;
+}
+
+.center-nav-menu a {
+    border-bottom: 1px solid #343C38;
+    padding: 10px 0 10px 10px;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    color: #343C38;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .center-text {
+    margin: 0;
+    margin-top: 50px;
+}
+
+.header-container {
+  margin-top: 100px;
+}
+
+.portfolio-container {
+  margin: 50px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid img{
+  max-width: 100%;
+  object-fit: cover;
+}
+
+
+.portfolio-container a:first-child {
+  margin: 0;
+}
+
+.portfolio-container a {
+  margin: 50px 0 0;
+}
+
+.portfolio-link {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+}
+
+@media screen and (max-width: 769px) {
+  .hero {
+    background-image: url(../images/site-images/garden-table.png); 
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-content img{
+  width: 30%;
+}
+
+.hero-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+}
+}

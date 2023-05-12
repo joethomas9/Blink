@@ -1,0 +1,47 @@
+@media screen and (min-width: 769px) {
+.title-container {
+    margin: 200px 8vw 0;
+    display: flex;
+}
+
+.grid-container {
+    margin: 150px 8vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid:first-child {margin: 0;}
+
+.grid {
+    margin-left: 1vw;
+    width: 32vw;
+}
+
+.grid img{
+    max-width: 100%;
+}
+
+.green-background {
+    margin-top: -450px;}
+}
+
+@media screen and (max-width: 768px) {
+
+    #desktop-content {
+        display: none;
+    }
+
+    .title-container {
+        margin-top: 200px;
+    }
+
+    .accordion-wrapper {
+        margin-top: 50px;
+    }
+    
+    .grid img {
+        max-width: 100%;
+    }
+
+
+}

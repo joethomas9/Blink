@@ -27,7 +27,7 @@ function binarySearch($arr, $x, $key) {
 
   while ($low <= $high) {
       $mid = floor(($low + $high) / 2);
-      if ($arr[$mid][$key] <= $x && $x < $arr[$mid+1][$key]) {
+      if ($arr[$mid][$key] == $x) {
           return $arr[$mid]['rate'];
       }
 
@@ -58,7 +58,9 @@ function calc_weight($w) {
   }
   else {
     $json_data = json_decode(file_get_contents('./JSON-data/weight.json'), true);
-    $rate = binarySearch($json_data, $w, 'weight');
+    $w_floor = floor($w/100)*100;
+    echo $w_floor;
+    $rate = binarySearch($json_data, $w_floor, 'weight');
   }
   return $rate;
 }
